@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@100;300&family=Work+Sans:ital,wght@0,800;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aleo:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100;300&family=Work+Sans:ital,wght@0,800;1,500&display=swap');
+
+html{
+    height: 100%;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Aleo', serif;
+}
+body{
+    margin: 0px auto;
+    min-width: 200px;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+section.main{
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 25px 5px #bebebe;
+    margin-top: 10%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+div.col-1{
+    flex: 1 1 30%;
+    margin-left: 2rem;
+    border-left:  1.5px solid rgba(0, 0, 0, 0.13);
+    border-right:  1.5px solid rgba(0, 0, 0, 0.13);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.col-1 > img{
+    margin-top: 8%;
+    width: 60%;
+}
+.col-1 h1{
+    text-align: center;
+}
+div.col-2{
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+div.div-form{    
+    display: flex;
+    justify-content: center;
+}
+div.empty{
+    content: "";
+    background-color: #dd1533;
+    width: 90%;
+    height: 30%;
+}
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 2rem;
+   width: 70%;
+   border-radius: 30px;
+   box-shadow: 5px 5px 25px 5px #bebebe;
+   margin-top: 2rem;
+   
+    
+}
+form > div{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-left: 1rem;
+}
+form input{
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+form input:focus{
+    outline: none;
+}
+form >h3{
+    margin-top: 0;
+    border-radius: 30px;
+    box-shadow: 5px 0px 25px 5px #bebebe;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    padding: 1rem;
+}
+
+form button{
+    border: none;
+    background-color: #dd1533;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 25px;
+    padding: 0.3rem;
+    color: white;
+    margin-top: 1rem;
+    font-family: 'Aleo', serif;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 90%;
+}
+/* Login */
+label{
+    display: none;
+}
+input::placeholder{
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+.login-form{
+    border-radius: 15px;
+    width: 50%;
+}
+.login-form h1, .login-form p{
+    text-align: center;
+}
+.login-form a{
+    text-decoration: none;
+}
+.login-form div{
+    width: 80%;
+    justify-content:  center;
+}
+@media  only screen and (max-width: 480px) {
+    section.main{
+        flex-direction: column;
+    }
+    div.empty{
+        width: 90%;
+        
+    }
+
+    .login-form{
+        width: 90%;
+        margin-left: 1rem;
+    }
+}

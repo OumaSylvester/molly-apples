@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Log In</title>
+        <link href="/static/css/base.css" rel="stylesheet">
+    </head>
+    <body>
+        
+    <section>
+        <h3>Sign In</h3>
+        <form method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="cdf3j5M5aQVPHR2Bcc1tVfgE4BI4U8xglZEe7CfeQ6Q9J8g2i9gY2vKTgkw1LQnt">
+            <div>
+    
+      <label for="id_username">Username:</label>
+    
+    
+    
+    <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username">
+    
+    
+</div>
+
+  <div>
+    
+      <label for="id_password">Password:</label>
+    
+    
+    
+    <input type="password" name="password" autocomplete="current-password" required id="id_password">
+    
+    
+      
+    
+</div>
+            <div class="text-center mt-3">
+                <button class="btn btn-primary" type="submit">Login</button>
+            </div>
+            <p><a href="/accounts/password_reset/">Forgot your password?</a> </p>
+        </form>
+    </section>
+
+
+    </body>
+</html>

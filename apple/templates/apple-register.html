@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Register Apple{% endblock title %}
+{% block content %}
+    <section  class="main">
+        <div class="col-1">
+            <img src="{% static './img/apple.png' %}" alt="Apple image">
+            <h1>Register Apple</h1>
+        </div>
+        <div class="col-2">
+            <div class="empty"></div>
+            <div class="div-form">
+                <form method="post">
+                    <h3>Register Apple</h3>
+                    {% csrf_token %}
+                    {{ form.as_div }}
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    <script>
+        window.onload = getMyLocation;
+        function getMyLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(getLatLong);
+            }else{
+                console.log('Your phone does not have geolocation support')
+            }
+        }
+        function getLatLong(location){
+          var geoLocElement = document.getElementById('id_geolocation');
+           geoLocElement.value = location.coords.latitude + ', ' + location.coords.longitude;
+        }
+
+    </script>
+{% endblock content %}
